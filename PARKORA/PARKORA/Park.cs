@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace PARKORA
 {
@@ -15,25 +13,26 @@ namespace PARKORA
 
         public Park()
         {
-            TrackSlot = new Slot(10, new List<Recipe> { new Recipe(15, 0), new Recipe(1500, 30) });
-            BusSlot = new Slot(15, new List<Recipe> { new Recipe(20, 0), new Recipe(1500, 25) });
-            CarSlot = new Slot(20, new List<Recipe> { new Recipe(25, 0), new Recipe(1500, 20) });
-            MotorbikeSlot = new Slot(25, new List<Recipe> { new Recipe(30, 0), new Recipe(1500, 15) });
+            TrackSlot = new Slot(5, new List<Recipe> { new Recipe(5, 0), new Recipe(1500, 30)});
+            BusSlot = new Slot(5, new List<Recipe> { new Recipe(2, 0), new Recipe(1500, 25)});
+            CarSlot = new Slot(5, new List<Recipe> { new Recipe(2, 0), new Recipe(1500, 20)});
+            MotorbikeSlot = new Slot(5, new List<Recipe> { new Recipe(3, 0), new Recipe(1500, 15)});
         }
 
-        public void ParkIn(Vehicle vehicle) //Parka giriş için kullnılan metod.
+        public void ParkIn(Vehicle vehicle,MaskedTextBox textBox) //Parka giriş için kullnılan metod.
         {
+           
             try
             {
-                vehicle.CheckPlate();
+                vehicle.CheckPlate(textBox);
             }
             catch (Exception e)
             {
-                Console.WriteLine("hata");
-                throw;
+                MessageBox.Show("HATALI PLAKA");
+                return;
             }
 
-            switch (vehicle.GetType())
+            switch (vehicle.Type)
             {
                 case VehicleType.Truck:
                     this.TrackSlot.SlotIn(vehicle);
@@ -54,27 +53,45 @@ namespace PARKORA
         public void ParkOut(Vehicle vehicle)//Parktan çıkış için kullnılan metod.
         {
 
-            switch (vehicle.GetType())
+            switch (vehicle.Type)
             {
                 case VehicleType.Truck:
-                    this.TrackSlot.SlotOut(vehicle.GetPlate());
+                    this.TrackSlot.SlotOut(vehicle.Plate);
                     break;
                 case VehicleType.Bus:
-                    this.BusSlot.SlotOut(vehicle.GetPlate());
+                    this.BusSlot.SlotOut(vehicle.Plate);
                     break;
                 case VehicleType.Car:
-                    this.CarSlot.SlotOut(vehicle.GetPlate());
+                    this.CarSlot.SlotOut(vehicle.Plate);
                     break;
                 case VehicleType.Motorbike:
-                    this.MotorbikeSlot.SlotOut(vehicle.GetPlate());
+                    this.MotorbikeSlot.SlotOut(vehicle.Plate);
                     break;
             }
         }
-
-        public List<List<Ticket>> Report() //Raporlama kısmı için kullandığımız metod
+        public List<Ticket> GetParkIn()
         {
-
-            return new List<List<Ticket>> { TrackSlot.GetSlotOut(), BusSlot.GetSlotOut(), CarSlot.GetSlotOut(), MotorbikeSlot.GetSlotOut() };
+            var ticketList = new List<Ticket>();
+            ticketList.AddRange(TrackSlot.GetSlotIn());
+            ticketList.AddRange(BusSlot.GetSlotIn());
+            ticketList.AddRange(CarSlot.GetSlotIn());
+            ticketList.AddRange(MotorbikeSlot.GetSlotIn());
+            return ticketList;
         }
+
+        public List<Ticket> GetParkOut()
+        {
+            var ticketList = new List<Ticket>();
+            ticketList.AddRange(TrackSlot.GetSlotOut());
+            ticketList.AddRange(BusSlot.GetSlotOut());
+            ticketList.AddRange(CarSlot.GetSlotOut());
+            ticketList.AddRange(MotorbikeSlot.GetSlotOut());
+            return ticketList;
+        }
+
+
+
+
+
     }
 }

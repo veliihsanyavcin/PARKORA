@@ -10,7 +10,7 @@ namespace PARKORA
 {
     public class Account
     {
-        private const string UserName = "admin"; //Giriş için kullanılan Kullanıcı adı.
+        private const string UserName = "1"; //Giriş için kullanılan Kullanıcı adı.
         private const string Password = "1"; //.Giriş için kullanılan şifre.
 
         public void Login(TextBox UserName, TextBox Password, ErrorProvider ep, Form loginForm)

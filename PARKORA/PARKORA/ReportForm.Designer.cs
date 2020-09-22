@@ -28,47 +28,81 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.listView1 = new System.Windows.Forms.ListView();
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            "truck_text",
+            "TRUCK",
+            "",
+            "",
+            "",
+            ""}, -1, System.Drawing.Color.MediumBlue, System.Drawing.Color.Empty, new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162))));
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            "",
+            "BUS",
+            "",
+            "",
+            "",
+            ""}, -1, System.Drawing.Color.MediumBlue, System.Drawing.Color.Empty, new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162))));
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            "",
+            "CAR",
+            "",
+            "",
+            "",
+            ""}, -1, System.Drawing.Color.MediumBlue, System.Drawing.Color.Empty, new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162))));
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            "",
+            "MOTORBİKE",
+            "",
+            "",
+            "",
+            ""}, -1, System.Drawing.Color.MediumBlue, System.Drawing.Color.Empty, new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162))));
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "", System.Drawing.Color.Red, System.Drawing.SystemColors.Window, new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)))),
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "TOPLAM", System.Drawing.Color.Red, System.Drawing.Color.White, new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)))),
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "", System.Drawing.Color.DarkGreen, System.Drawing.SystemColors.Window, new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)))),
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "", System.Drawing.Color.DarkGreen, System.Drawing.SystemColors.Window, new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)))),
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "", System.Drawing.Color.DarkGreen, System.Drawing.SystemColors.Window, new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)))),
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "", System.Drawing.Color.DarkGreen, System.Drawing.SystemColors.Window, new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162))))}, -1);
+            this.reportList1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblAracSayisi = new System.Windows.Forms.Label();
-            this.lblKasa = new System.Windows.Forms.Label();
-            this.listView2 = new System.Windows.Forms.ListView();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ozetList = new System.Windows.Forms.ListView();
             this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader12 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // listView1
+            // reportList1
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.reportList1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4,
             this.columnHeader5,
-            this.columnHeader6});
-            this.listView1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(12, 12);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(690, 312);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
+            this.columnHeader6,
+            this.columnHeader7});
+            this.reportList1.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.reportList1.GridLines = true;
+            this.reportList1.HideSelection = false;
+            this.reportList1.Location = new System.Drawing.Point(12, 12);
+            this.reportList1.Name = "reportList1";
+            this.reportList1.Size = new System.Drawing.Size(1089, 312);
+            this.reportList1.TabIndex = 0;
+            this.reportList1.UseCompatibleStateImageBehavior = false;
+            this.reportList1.View = System.Windows.Forms.View.Details;
+           
             // columnHeader1
             // 
-            this.columnHeader1.Text = "PLAKA";
-            this.columnHeader1.Width = 102;
+            this.columnHeader1.Text = "";
+            this.columnHeader1.Width = 0;
             // 
             // columnHeader2
             // 
@@ -77,137 +111,107 @@
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "GİRİŞ SAATİ";
-            this.columnHeader3.Width = 133;
+            this.columnHeader3.Text = "PLAKA";
+            this.columnHeader3.Width = 124;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "ÇIKIŞ SAATİ";
-            this.columnHeader4.Width = 128;
+            this.columnHeader4.Text = "GİRİŞ SAATİ";
+            this.columnHeader4.Width = 238;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "SÜRE";
-            this.columnHeader5.Width = 99;
+            this.columnHeader5.Text = "ÇIKIŞ SAATİ";
+            this.columnHeader5.Width = 211;
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "ÜCRET";
-            this.columnHeader6.Width = 105;
+            this.columnHeader6.Text = "SÜRE";
+            this.columnHeader6.Width = 250;
             // 
-            // label1
+            // columnHeader7
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(729, 342);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Araç Sayısı";
+            this.columnHeader7.Text = "ÜCRET";
+            this.columnHeader7.Width = 121;
             // 
-            // label2
+            // ozetList
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(1065, 342);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Kasa";
-            // 
-            // lblAracSayisi
-            // 
-            this.lblAracSayisi.AutoSize = true;
-            this.lblAracSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAracSayisi.Location = new System.Drawing.Point(855, 342);
-            this.lblAracSayisi.Name = "lblAracSayisi";
-            this.lblAracSayisi.Size = new System.Drawing.Size(120, 25);
-            this.lblAracSayisi.TabIndex = 1;
-            this.lblAracSayisi.Text = "Araç Sayısı";
-            // 
-            // lblKasa
-            // 
-            this.lblKasa.AutoSize = true;
-            this.lblKasa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKasa.Location = new System.Drawing.Point(1140, 342);
-            this.lblKasa.Name = "lblKasa";
-            this.lblKasa.Size = new System.Drawing.Size(61, 25);
-            this.lblKasa.TabIndex = 2;
-            this.lblKasa.Text = "Kasa";
-            // 
-            // listView2
-            // 
-            this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.ozetList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader8,
             this.columnHeader9,
             this.columnHeader11,
-            this.columnHeader12});
-            this.listView2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.listView2.GridLines = true;
-            this.listView2.HideSelection = false;
-            this.listView2.Location = new System.Drawing.Point(734, 12);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(467, 312);
-            this.listView2.TabIndex = 3;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            this.listView2.View = System.Windows.Forms.View.Details;
+            this.columnHeader12,
+            this.columnHeader10});
+            this.ozetList.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ozetList.GridLines = true;
+            this.ozetList.HideSelection = false;
+            this.ozetList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5});
+            this.ozetList.Location = new System.Drawing.Point(12, 346);
+            this.ozetList.Name = "ozetList";
+            this.ozetList.Size = new System.Drawing.Size(1089, 312);
+            this.ozetList.TabIndex = 3;
+            this.ozetList.UseCompatibleStateImageBehavior = false;
+            this.ozetList.View = System.Windows.Forms.View.Details;
             // 
             // columnHeader8
             // 
-            this.columnHeader8.Text = "ARAÇ TİPİ";
-            this.columnHeader8.Width = 135;
+            this.columnHeader8.Text = "";
+            this.columnHeader8.Width = 0;
             // 
             // columnHeader9
             // 
-            this.columnHeader9.Text = "ADET";
-            this.columnHeader9.Width = 61;
+            this.columnHeader9.Text = "ARAÇ TİPİ";
+            this.columnHeader9.Width = 240;
             // 
             // columnHeader11
             // 
-            this.columnHeader11.Text = "TOPLAM SÜRE";
-            this.columnHeader11.Width = 133;
+            this.columnHeader11.Text = "ADET";
+            this.columnHeader11.Width = 258;
             // 
             // columnHeader12
             // 
-            this.columnHeader12.Text = "TOPLAM ÜCRET";
-            this.columnHeader12.Width = 134;
+            this.columnHeader12.Text = "TOPLAM SÜRE";
+            this.columnHeader12.Width = 354;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "ÜCRET";
+            this.columnHeader10.Width = 218;
             // 
             // ReportForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1221, 386);
-            this.Controls.Add(this.listView2);
-            this.Controls.Add(this.lblKasa);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblAracSayisi);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(1113, 670);
+            this.Controls.Add(this.ozetList);
+            this.Controls.Add(this.reportList1);
             this.Name = "ReportForm";
             this.Text = "RaporForm";
             this.Load += new System.EventHandler(this.RaporForm_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView reportList1;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblAracSayisi;
-        private System.Windows.Forms.Label lblKasa;
-        private System.Windows.Forms.ListView listView2;
+        private System.Windows.Forms.ListView ozetList;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
     }
 }
