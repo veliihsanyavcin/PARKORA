@@ -78,6 +78,7 @@
             // 
             // cmbSinif
             // 
+            this.cmbSinif.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSinif.FormattingEnabled = true;
             this.cmbSinif.Location = new System.Drawing.Point(86, 105);
             this.cmbSinif.Name = "cmbSinif";
@@ -97,7 +98,6 @@
             // txtPlaka
             // 
             this.txtPlaka.Location = new System.Drawing.Point(86, 44);
-            this.txtPlaka.Mask = "00 LL 0000";
             this.txtPlaka.Name = "txtPlaka";
             this.txtPlaka.Size = new System.Drawing.Size(133, 29);
             this.txtPlaka.TabIndex = 0;

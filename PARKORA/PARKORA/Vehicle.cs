@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -24,7 +25,7 @@ namespace PARKORA
         {
             if (!textBox.MaskFull)
             {
-                
+
                 throw new SyntaxErrorException();
             }
 
@@ -35,6 +36,15 @@ namespace PARKORA
 
                 throw new SyntaxErrorException();
             }
+
+            //Regex top = new Regex("^[8-9][2-9]");
+            //Regex zero = new Regex("^[0][0]");
+            //Regex r = new Regex("^\\d{2}-\\w{1,3}-\\d{2,4}$");
+
+            //if (!r.IsMatch(Plate) || zero.IsMatch(Plate) || top.IsMatch(Plate))
+            //{
+                
+            //}
         }
     }
 }

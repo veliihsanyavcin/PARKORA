@@ -18,7 +18,7 @@ namespace PARKORA
             MotorbikeSlot = new Slot(5, new List<Recipe> { new Recipe(3, 0), new Recipe(1500, 15) });
         }
 
-        public void ParkIn(Vehicle vehicle, MaskedTextBox textBox) //Parka giriş için kullnılan metod.
+        public void ParkIn(Vehicle vehicle,MaskedTextBox textBox) //Parka giriş için kullnılan metod.
         {
 
             try
