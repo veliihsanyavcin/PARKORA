@@ -30,12 +30,10 @@ namespace PARKORA
             }
             else
             {
-
                 if (UserName.Text.ToLower().Trim() != Account.UserName)
                     ep.SetError(UserName, "Kullanıcı Adı Hatalı.");
                 if (Password.Text.Trim() != Account.Password)
                     ep.SetError(Password, "Parola Hatalı");
-
             }
         }
     }

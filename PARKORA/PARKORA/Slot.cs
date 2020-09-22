@@ -56,24 +56,21 @@ namespace PARKORA
 
         public List<Ticket> GetSlotOut() //Çıkış yapan araçların listesinin tutulduğu metod.
         {
-            return TicketList.FindAll(x => x.TimeOut != null);
+            return TicketList.FindAll(x => x.TimeOut != DateTime.MinValue);
         }
 
         private bool IsEmpty() //Araçlarımız için yer kontrolünün sağlandığı meytod.
         {
-
             return this.Capacity - GetSlotIn().Count > 0;
         }
 
-        private bool
-            IsAlreadyIn(string plate) //Plaka kontrolünün sağlandığı listede olup-olmadığının kontrol edildiği metod.
+        private bool IsAlreadyIn(string plate) //Plaka kontrolünün sağlandığı listede olup-olmadığının kontrol edildiği metod.
         {
             return GetSlotIn().Exists(x => x.Vehicle.Plate == plate);
         }
 
         private double CalcPayment(Ticket ticket) //Ödeme
         {
-
 
             TimeSpan fark = ticket.TimeOut - ticket.TimeIn;
             double saniye = fark.TotalSeconds;
@@ -109,52 +106,7 @@ namespace PARKORA
             }
 
             return totalCost;
-            //}
         }
-
-        //private double CalcPayment(Ticket ticket) //Ödeme
-        //{
-        //    TimeSpan fark = ticket.TimeOut - ticket.TimeIn;
-        //    double saniye = fark.TotalSeconds;
-
-        //    RecipeList.Sort((x, y) => (int) (x.Period - y.Period));
-        //    var maxPeriod = RecipeList[RecipeList.Count - 1].Period;
-
-        //    double totalCost = 0;
-        //    double remaininSecond = saniye;
-        //    double currentPeriodCost = 0;
-        //    Recipe previousRecipe = null;
-
-        //    int i = 0;
-        //    int i2 = 0;
-
-        //    do
-        //    {
-        //        currentPeriodCost = 0d;
-
-        //        do
-        //        {
-        //            var recipe = RecipeList[i2];
-
-        //            if (previousRecipe != null && previousRecipe.Period < remaininSecond && remaininSecond <= recipe.Period)
-        //            {
-        //                currentPeriodCost = recipe.Cost;
-        //            }
-        //            else if (remaininSecond >= recipe.Period)
-        //            {
-        //                currentPeriodCost = recipe.Cost;
-        //            }
-        //        } 
-        //        while (i2++ < RecipeList.Count-1);
-
-        //        totalCost += currentPeriodCost;
-        //        remaininSecond -= maxPeriod;
-
-        //    } 
-        //    while (i++ < Math.Ceiling(saniye / maxPeriod) - 1);
-
-        //    return totalCost;
-        //}
     }
 }
 

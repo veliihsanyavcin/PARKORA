@@ -20,7 +20,6 @@ namespace PARKORA
             this.Type = type;
         }
 
-
         public void CheckPlate(MaskedTextBox textBox) //Girilen plaka için kontrol yaptığımız metod.
         {
             if (!textBox.MaskFull)

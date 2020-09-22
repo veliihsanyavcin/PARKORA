@@ -10,18 +10,17 @@ namespace PARKORA
         private Slot BusSlot;
         private Slot CarSlot;
         private Slot MotorbikeSlot;
-
         public Park()
         {
-            TrackSlot = new Slot(5, new List<Recipe> { new Recipe(5, 0), new Recipe(1500, 30)});
-            BusSlot = new Slot(5, new List<Recipe> { new Recipe(2, 0), new Recipe(1500, 25)});
-            CarSlot = new Slot(5, new List<Recipe> { new Recipe(2, 0), new Recipe(1500, 20)});
-            MotorbikeSlot = new Slot(5, new List<Recipe> { new Recipe(3, 0), new Recipe(1500, 15)});
+            TrackSlot = new Slot(5, new List<Recipe> { new Recipe(5, 0), new Recipe(1500, 30) });
+            BusSlot = new Slot(5, new List<Recipe> { new Recipe(2, 0), new Recipe(1500, 25) });
+            CarSlot = new Slot(5, new List<Recipe> { new Recipe(2, 0), new Recipe(1500, 20) });
+            MotorbikeSlot = new Slot(5, new List<Recipe> { new Recipe(3, 0), new Recipe(1500, 15) });
         }
 
-        public void ParkIn(Vehicle vehicle,MaskedTextBox textBox) //Parka giriş için kullnılan metod.
+        public void ParkIn(Vehicle vehicle, MaskedTextBox textBox) //Parka giriş için kullnılan metod.
         {
-           
+
             try
             {
                 vehicle.CheckPlate(textBox);
@@ -88,10 +87,5 @@ namespace PARKORA
             ticketList.AddRange(MotorbikeSlot.GetSlotOut());
             return ticketList;
         }
-
-
-
-
-
     }
 }

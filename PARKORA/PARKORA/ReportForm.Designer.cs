@@ -28,41 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "truck_text",
-            "TRUCK",
-            "",
-            "",
-            "",
-            ""}, -1, System.Drawing.Color.MediumBlue, System.Drawing.Color.Empty, new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162))));
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "",
-            "BUS",
-            "",
-            "",
-            "",
-            ""}, -1, System.Drawing.Color.MediumBlue, System.Drawing.Color.Empty, new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162))));
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
-            "",
-            "CAR",
-            "",
-            "",
-            "",
-            ""}, -1, System.Drawing.Color.MediumBlue, System.Drawing.Color.Empty, new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162))));
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
-            "",
-            "MOTORBİKE",
-            "",
-            "",
-            "",
-            ""}, -1, System.Drawing.Color.MediumBlue, System.Drawing.Color.Empty, new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162))));
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "", System.Drawing.Color.Red, System.Drawing.SystemColors.Window, new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)))),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "TOPLAM", System.Drawing.Color.Red, System.Drawing.Color.White, new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)))),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "", System.Drawing.Color.DarkGreen, System.Drawing.SystemColors.Window, new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)))),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "", System.Drawing.Color.DarkGreen, System.Drawing.SystemColors.Window, new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)))),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "", System.Drawing.Color.DarkGreen, System.Drawing.SystemColors.Window, new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)))),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "", System.Drawing.Color.DarkGreen, System.Drawing.SystemColors.Window, new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162))))}, -1);
             this.reportList1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -98,7 +63,7 @@
             this.reportList1.TabIndex = 0;
             this.reportList1.UseCompatibleStateImageBehavior = false;
             this.reportList1.View = System.Windows.Forms.View.Details;
-           
+            // 
             // columnHeader1
             // 
             this.columnHeader1.Text = "";
@@ -145,12 +110,6 @@
             this.ozetList.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ozetList.GridLines = true;
             this.ozetList.HideSelection = false;
-            this.ozetList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4,
-            listViewItem5});
             this.ozetList.Location = new System.Drawing.Point(12, 346);
             this.ozetList.Name = "ozetList";
             this.ozetList.Size = new System.Drawing.Size(1089, 312);
@@ -166,12 +125,12 @@
             // columnHeader9
             // 
             this.columnHeader9.Text = "ARAÇ TİPİ";
-            this.columnHeader9.Width = 240;
+            this.columnHeader9.Width = 160;
             // 
             // columnHeader11
             // 
             this.columnHeader11.Text = "ADET";
-            this.columnHeader11.Width = 258;
+            this.columnHeader11.Width = 293;
             // 
             // columnHeader12
             // 
