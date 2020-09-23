@@ -6,23 +6,20 @@ using System.Threading.Tasks;
 
 namespace PARKORA
 {
-   public class Ticket
+    public class Ticket
     {
-        private string Plate { get; }
+        public Vehicle Vehicle { get; }
 
-        private Type VehicleType { get; }
+        public DateTime TimeIn { get; } //Giriş zamanı için kullanılır.
 
-        private DateTime TimeIn { get; } //Giriş zamanı için kullanılır.
+        public DateTime TimeOut { get; set; } //Çıkış zamanı için kullanılır.
 
-        private Ticket(string Plate, Type VehicleType, DateTime TimeIn)
+        public double Cost { get; set; }
+
+        public Ticket(Vehicle vehicle, DateTime TimeIn)
         {
-            this.Plate = Plate;
-            this.VehicleType = VehicleType;
+            this.Vehicle = vehicle;
             this.TimeIn = TimeIn;
         }
-
-        private DateTime TimeOut { get; set; }//Çıkış zamanı için kullanılır.
-
-        private double Cost { get; set; }
     }
 }
